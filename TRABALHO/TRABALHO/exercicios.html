@@ -1,0 +1,322 @@
+<!doctype>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="java/java.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <title>Exercícios Estrutura Sequencial</title>
+
+</head>
+
+<body>
+    <div id="interface">
+        <img id="facef" src="Uni_FACEF_MUNICIPAL.png">
+        <h1><b>Exercícios estrutura sequencial de 1 a 15 - Eng. Software / Uni-Facef 2018</b></h1>
+        <p>Ramon Sousa Pereira (Eng. Software) - Marcelo Souza (Eng. Software) - Guilherme Avelar (Sistema de Informação)</p>
+        <div id="exercicio-01">
+            <h4>Exercício 01</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba 2 números, calcule e mostre a subtração do primeiro número pelo segundo.
+				</label><br>
+            <input type="text" id="valor1" label for="valor1" placeholder="DIGITE O PRIMEIRO NÚMERO">
+            <input type="text" id="valor2" label for="valor2" placeholder="DÍGITE O SEGUNDO NÚMERO">
+
+            <button class="button" onclick="subtrai()"> <span> Calcular </span></button> <br>
+            <label id="resultado"></label>
+        </div>
+        <div id="exercicio-02">
+            <h4>Exercício 02</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba 3 números, calcule e mostre a multiplicação desses números.
+				</label><br>
+            <input type="number" id="mult-1" label for="mult-2" placeholder="DIGITE O PRIMEIRO NÚMERO">
+            <input type="number" id="mult-2" label for="mult-2" placeholder="DÍGITE O SEGUNDO NÚMERO">
+            <input type="number" id="mult-3" label for="mult-3" placeholder="DÍGITE O SEGUNDO NÚMERO">
+
+            <button class="button" onclick="multiplicar()"> <span> Calcular </span></button> <br>
+            <div id="mult-resul" class="results"></div>
+        </div>
+        <div id="exercicio-03">
+            <h4>Exercício 03</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba 2 números, calcule e mostre a divisão desses números.
+				</label><br>
+            <input type="number" id="div-1" label for="div-2" placeholder="DIGITE O PRIMEIRO NÚMERO">
+            <input type="number" id="div-2" label for="div-2" placeholder="DÍGITE O SEGUNDO NÚMERO">
+
+            <button class="button" onclick="divisao()"> <span> Calcular </span></button> <br>
+            <div id="div-resul" class="results"></div>
+        </div>
+        <div id="exercicio-04">
+            <h4>Exercício 04</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba 2 notas, calcule e mostre a média ponderada dessas notas, considerando peso 2 para a primeira nota e peso 3 para segunda nota.
+				</label><br>
+            <input type="number" id="nota-1" placeholder="DIGITE O PRIMEIRO NÚMERO">
+            <input type="number" id="nota-2" placeholder="DÍGITE O SEGUNDO NÚMERO">
+
+            <button class="button" onclick="notas()"> <span> Calcular </span></button> <br>
+            <label id="nota-resul"></label>
+        </div>
+        <div id="exercicio-05">
+            <h4>Exercício 05</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba o preço de um produto, calcule e mostre o novo valor com 10% de desconto.
+				</label><br>
+            <input type="text" id="valor-1" label for="valor-1" placeholder="DIGITE O PREÇO">
+
+            <button class="button" onclick="desconto()"> <span> Calcular </span></button> <br>
+            <label id="desc-resul"></label>
+        </div>
+        <div id="exercicio-06">
+            <h4>Exercício 06</h4>
+            <label class="enunciado"> 
+				Um funcionário recebe um salário fixo mais 4%, faça um programa que receba o salário fixo de um funcionário e mostre o salário mais 4%.
+				</label><br>
+            <input type="text" id="salario-04" placeholder="DIGITE O SALÁRIO">
+            <button class="button" onclick="salario04()"> <span> Calcular </span></button> <br>
+            <label id="sala04-resul"></label>
+        </div>
+        <div id="exercicio-07">
+            <h4>Exercício 07</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba o peso de uma pessoa, e mostre o peso novo se ela engordar 15% e o peso se emagrecer 20%.
+				</label><br>
+            <input type="number" id="peso-1" label for="peso-1" placeholder="DIGITE SEU PESO">
+            <button class="button" onclick="peso()"> <span> Calcular </span></button> <br>
+            <label id="peso-resul-1"></label>
+            <label id="peso-resul-2"></label>
+            <label id="peso-resul-3"></label>
+        </div>
+        <div id="exercicio-08">
+            <h4>Exercício 08</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba o peso de uma pessoa em kilo e mostre em gramas.
+				</label><br>
+            <input type="number" id="peso-01" placeholder="DIGITE SEU PESO">
+            <button class="button" onclick="pesog()"> <span> Calcular </span></button> <br>
+            <label id="gramas"></label>
+        </div>
+        <div id="exercicio-09">
+            <h4>Exercício 09</h4>
+            <label class="enunciado"> 
+				Faça um programa que calcule e mostre a área de um trapézio.
+				</label><br>
+            <input type="text" id="var-1" label for="var-1" placeholder="INSIRA A BASE MAIOR">
+            <input type="text" id="var-2" label for="var-2" placeholder="INSIRA A BASE MENOR">
+            <input type="text" id="var-3" label for="var-3" placeholder="INSIRA ALTURA">
+
+            <button class="button" onclick="trapezio()"> <span> Calcular </span></button> <br>
+            <label id="trap-resul"></label>
+        </div>
+        <div id="exercicio-10">
+            <h4>Exercício 10</h4>
+            <label class="enunciado"> 
+				Faça um programa que calcule e mostre a área de um quadrado.
+				</label><br>
+            <input type="number" id="lado-1" label for="lado-1" placeholder="INSIRA O LADO DO QUADRADO">
+            <button class="button" onclick="quadrado()"> <span> Calcular </span></button> <br>
+            <label id="lado-resul"></label>
+        </div>
+        <div id="exercicio-11">
+            <h4>Exercício 11</h4>
+            <label class="enunciado"> 
+                Faça um programa que calcule e mostre a área de um losango.
+				</label><br>
+            <input type="number" id="losango-1" label for="losango-1" placeholder="DIGITE A DIAGONAL MAIOR">
+            <input type="number" id="losango-2" label for="losango-2" placeholder="DÍGITE A DIAGONAL MENOR">
+
+            <button class="button" onclick="losango()"> <span> Calcular </span></button> <br>
+            <label id="losango-resul"></label>
+        </div>
+        <div id="exercicio-12">
+            <h4>Exercício 12</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba o valor do sálario mínimo e o valor do salário de um funcionário, calcule e mostre a quantidade de salário minímo desse funcionário.
+				</label><br>
+            <input type="text" id="sala-1" label for="sala-1" placeholder="DIGITE O VALOR DO SÁLARIO MÍNIMO">
+            <input type="text" id="sala-2" label for="sala-2" placeholder="DÍGITE SÁLARIO DO FUNCIONARIO">
+
+            <button class="button" onclick="salario()"> <span> Calcular </span></button> <br>
+            <label id="sala-resul"></label>
+            <label id="sala-resul2"></label>
+        </div>
+        <div id="exercicio-13">
+            <h4>Exercício 13</h4>
+            <label class="enunciado"> 
+				Faça um programa que calcule e mostre a tabuada de um número digitado pelo usuário.
+				</label><br>
+            <input type="number" id="number-1" placeholder="DIGITE O NÚMERO PARA TABUADA">
+
+            <button class="button" onclick="tabuada()"> <span> Calcular </span></button> <br>
+            <div id="tabuada-resul"></div>
+        </div>
+        <div id="exercicio-14">
+            <h4>Exercício 14</h4>
+            <label class="enunciado"> 
+				Faça um programa que receba o ano de nascimento de uma pessoa calcule e mostre, idade em anos, meses, dias e semanas.
+				</label><br>
+            <input type="number" id="data-1" label placeholder="DIGITE O SEU ANO DE NASCIMENTO">
+
+            <button class="button" onclick="idade()"> <span> Calcular </span></button> <br>
+            <div id="data-resul"></div>
+        </div>
+        <div id="exercicio-15">
+            <h4>Exercício 15</h4>
+            <label class="enunciado"> 
+				João recebeu o salário e precisa pagar duas contas atrasadas. João terá de pagar multa de 2% sobre cada conta. Faça um programa que calcule e mostre quanto resta do salário do João.
+				</label><br>
+            <input type="number" id="contas-1" placeholder="INSIRA O SÁLARIO DO JOÃO">
+            <input type="number" id="contas-2" placeholder="DÍGITE O VALOR DA CONTA 1">
+            <input type="number" id="contas-3" placeholder="DÍGITE O VALOR DA CONTA 2">
+
+            <button class="button" onclick="contas()"> <span> Calcular </span></button> <br>
+            <div id="conta-resul"></div>
+        </div>
+    
+        <div id="exercicio-16">
+            <h4>Exercício 16</h4>
+            <label class="enunciado">
+                Faça um programa que receba o valor dos catetos de um triângulo, calcule e mostre o valor da hipotenusa.
+                </label><br>
+            <input type="number" id="cateto-1" placeholder="INSIRA O PRIMEIRO CATETO">
+            <input type="number" id="cateto-2" placeholder="INSIRA O SEGUNDO CATETO">
+
+            <button class="button" onclick="catetos()"> <span> Calcular </span></button> <br>
+            <div id="hipotenusa-resul"></div>
+        </div>
+
+        <div id="exercicio-17">
+            <h4>Exercício 17</h4>
+            <label class="enunciado">
+             Faça um programa que receba o raio, calcule e mostre:<br>
+             A) O comprimento de uma esfera <br> 
+             B) A área de uma esfera <br>
+             C) O volume de uma esfera <br>
+            </label><br>
+            <input type="number" id="raio-1" placeholder="INSIRA O RAIO">
+
+            <button class="button" onclick="raio()"> <span> Calcular </span></button> <br>
+            <div id="raio-resul1">
+            <div id="raio-resul2">
+            <div id="raio-resul3"></div>
+        </div>
+
+        <div id="exercicio-18">
+            <h4>Exercício 18</h4>
+            <label class="enunciado">
+                Faça um programa que receba a temperatura em Celsius, calcule e mostre essa temperatura em Fahrenheit.
+            </label><br>
+            <input type="number" id="celsius-1" placeholder="INSIRA A TEMPERATURA">
+
+            <button class="button" onclick="temperatura()"> <span> Calcular </span> </button> <br>
+            <div id="temperatura-resul"></div>
+        </div>        
+
+        <div id="exercicio-19">
+            <h4>Exercício 19</h4>
+            <label class="enunciado">
+                Sabe-se que para iluminar de maneira correta os cômodos de uma casa, para cada metro quadrado, deve-se usar 18 W de potência. Faça um programa que receba as duas dimensões de um cômodo (em metros), calcule e mostre a sua área (em metros quadrados) e a potência de iluminação que deverá ser utilizada.
+            </label><br>
+            <input type="text" id="iluminar-1" placeholder="DIMENSÃO DO CÔMODO"> 
+            <input type="text" id="iluminar-2" placeholder="DIMENSÃO DO CÔMODO"> 
+
+            <button class="button" onclick="iluminacao()"> <span> Calcular </span> </button> <br>
+            <div id="iluminacao-resul"></div>
+
+        <div id="exercicio-20">
+            <h4>Exercício 20</h4>
+            <label class="enunciado">
+                Faça um programa que receba a medida do ângulo formado por uma escada apoiada no chão e a distância que a escada está na parede. Calcule e mostre a medida da escada para que se possa alcançar a ponta da escada.
+            </label><br>
+            <input type="number" id="angulo-1" placeholder="INSIRA O ÂNGULO">
+            <input type="number" id="distancia-1" placeholder="INSIRA O ÂNGULO">
+
+            <button class="button" onclick="angulo()"> <span> Calcular </span> </button> <br>
+            <div id="angulo-resul"></div>
+        </div>
+
+
+        <div id="exercicio-21">
+            <h4>Exercício 21</h4>
+            <label class="enunciado">
+                Faça um programa que receba o número de horas trabalhadas, o valor do salário mínimo e o número de horas extras trabalhadas. Calcule e mostre o salário a receber seguindo as regras a seguir:<br>
+                A) A hora trabalhada vale um oitavo do salário mínimo; <br>
+                B) A hora extra vale um quarto do salário mínimo; <br>
+                C) O salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada; <br>
+                D) A quantia a receber pelas horas extras equivale ao número de horas extras trabalhadas multiplicado pelo valor da hora extra; <br>
+                E) O salário a receber equivale ao salário bruto mais a quantia a receber pelas horas extras. <br>
+            </label><br>
+            <input type="number" id="valor-01" placeholder= "NUM. DE HORAS TRAB."> 
+            <input type="number" id="valor-02" placeholder= "VALOR DO SALÁRIO MÍNIMO"> 
+            <input type="number" id="valor-03" placeholder= "NUM. DE HRS EXTRAS TRAB.">
+
+            <button class="button" onclick="salarios1()"> <span> Calcular </span> </button> <br>
+            <div id="salarios-resul"></div>
+        </div>
+
+        <div id="exercicio-22">
+            <h4>Exercício 22</h4>
+            <label class="enunciado"> 
+                Faça um programa que receba o número de lados de um polígono convexo, calcule e mostre o número de diagonais desse polígono, onde N é o número de lados do polígono.
+            </label><br>
+            <input type="text" id="poligono-1" placeholder="INSIRA O NUM. DE LADOS">    
+
+            <button class="button" onclick="salariominimo()"> <span> Calcular </span> </button> <br>
+            <div id="salariominimo-resul"></div> 
+        </div>
+
+        <div id="exercicio-23">
+            <h4>Exercício 23</h4>
+            <label class="enunciado">
+                 Faça um programa que receba a medida de dois ângulos de um triângulo, calcule e mostre a medida do terceiro ângulo.
+            </label><br>
+            <input type="number" id="angulo-01" placeholder="INSIRA O ÂNGULO">
+            <input type="number" id="angulo-02" placeholder="INSIRA O ÂNGULO"> 
+
+            <button class="button" onclick="angulos1()"> <span> Calcular </span> </button> <br>
+            <div id="angulos01-resul"></div>
+        </div>
+        
+        <div id="exercicio-24">
+            <h4>Exercício 24</h4>
+            <label class="enunciado"> 
+                Faça um programa que receba a quantidade de dinheiro em reais que uma pessoa que vai viajar possui. Essa pessoa vai passar por vários países e precisa converter seu dinheiro, para dólar, marco alemão e libra esterlina.
+            </label><br>
+            <input type="number" id="conversao-1" placeholder="INSIRA O VALOR">
+
+            <button class="button" onclick="conversao()"> <span> Calcular </span> </button> <br>
+            <div id="conversao-resul"></div>
+        </div>
+        
+        <div id="exercicio-25">
+            <h4>Exercício 25</h4>
+            <label class="enunciado">
+                Faça um programa que receba uma hora (uma variável para hora e outra para minutos), calcule e mostre: <br>
+                A) A hora digitada convertida em minutos <br>
+                B) O total dos minutos <br>
+                C) O total dos minutos convertidos em segundos <br>
+            </label> <br>
+            <input type="text" id="horas-1" placeholder="INSIRA A HORA">  
+            <input type="text" id="minutos-1" placeholder="INSIRA OS MINUTOS">
+
+            <button class="button" onclick="horasconvertidas()"> <span> Calcular </span> </button> <br>
+            <div id="horas-resul"></div>
+        </div>
+    </div>           
+</div>
+</div>
+</div>
+        <div>
+        <button class="button-1" onclick='parent.location="javascript:location.reload()"'> <span> Limpar todos os campos </span></button> <br>
+        </div>
+
+</body>
+<footer>
+    <p>
+       Copyright por GUILHERME AVELAR, RAMON SOUSA E MARCELO &copy; <br>
+        Franca 2018
+    </p>
+</footer>
+</html>
